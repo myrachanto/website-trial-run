@@ -23,9 +23,9 @@ export default {
   @apply  w-full h-32 sm:h-48 object-contain;
 }
 .h4header{
-  @apply font-semibold text-xl md:text-2xl text-gray-700 flex flex-wrap items-center justify-center leading-tight;
+  @apply font-serif text-xl md:text-2xl text-gray-700 flex flex-wrap items-center justify-center leading-tight;
 }
 .cardbody{
-  @apply m-4 text-xl text-gray-600 font-semibold;
+  @apply m-4 text-xl text-gray-600 ;
 }
 </style>
