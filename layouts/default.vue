@@ -18,6 +18,7 @@ export default {
 *{
   margin: 0;
   padding: 0;
+  font-family: serif;
 }
 .wrapper{
   @apply w-full;
