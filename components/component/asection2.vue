@@ -5,7 +5,7 @@
       <div class="flexing">
       <div class="griding">
          <div class="imaging">
-        <img src="~/assets/imgs/16.webp" alt="rresponsive dashboard" class="cardimg1"/>
+        <img src="~/assets/imgs/16.webp" alt=" dashboard" class="cardimg1"/>
       </div>
       <div class="comment">
       <h2 class="h2c">What we do</h2>

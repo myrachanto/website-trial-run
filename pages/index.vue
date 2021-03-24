@@ -21,7 +21,7 @@
         </div>
         <!--Right Col-->
         <div class="drimg">
-        <!-- <img src="~/assets/imgs/16.webp" alt="web development" class="img"/> -->
+        <contactform />
         </div>
       </div>
     </div>
@@ -31,6 +31,13 @@
     </svg>
     
     </div>
+    <div class="main1">
+    <div class="flexin">
+      <div class="griding">
+        <cardi v-for="(item, i) in items" :key="i" :item="item" />
+      </div>
+    </div>
+    </div>
 <asection />
      <!-- section -->
 <asection-2 />
@@ -39,12 +46,37 @@
 <script>
 import Asection from '~/components/component/asection.vue'
 import Asection2 from '~/components/component/asection2.vue'
-import Cardportfolioi from '~/components/component/cardi.vue'
+import cardi from '~/components/component/cardi.vue'
+import Contactform from '~/components/component/contactform.vue'
 export default {
-  components: { Cardportfolioi, Asection, Asection2 },
+  components: { cardi, Asection, Asection2, Contactform },
   data () {
     return {
-      portfolios: [
+      items: [
+        {
+          id: 1,
+          title: 'primera ',
+          description: `We design and develop websites or application to accomodate both personal or business related. Our goal is to ensure that you as a client get to reap all the benefits associated with the product in this case website or web application that you hired us to develop.
+          Online Accounting applications, e-commerce websites, simple websites, are just but a few of what we do here at Chantosweb developers`
+        },
+         {
+          id: 2,
+          title: 'segundo ',
+          description: `We design and develop websites or application to accomodate both personal or business related. Our goal is to ensure that you as a client get to reap all the benefits associated with the product in this case website or web application that you hired us to develop.
+          Online Accounting applications, e-commerce websites, simple websites, are just but a few of what we do here at Chantosweb developers`
+        },
+         {
+          id: 3,
+          title: 'tress ',
+          description: `We design and develop websites or application to accomodate both personal or business related. Our goal is to ensure that you as a client get to reap all the benefits associated with the product in this case website or web application that you hired us to develop.
+          Online Accounting applications, e-commerce websites, simple websites, are just but a few of what we do here at Chantosweb developers`
+        },
+         {
+          id: 4,
+          title: 'tress ',
+          description: `We design and develop websites or application to accomodate both personal or business related. Our goal is to ensure that you as a client get to reap all the benefits associated with the product in this case website or web application that you hired us to develop.
+          Online Accounting applications, e-commerce websites, simple websites, are just but a few of what we do here at Chantosweb developers`
+        }
       ]
     }
   }
@@ -68,7 +100,7 @@ export default {
   background-size: cover;
 }
 .main{
-  @apply container text-black mx-auto flex flex-wrap px-4 md:px-0 justify-between;
+  @apply container text-white mx-auto flex flex-wrap px-4 md:px-0 justify-between;
 }
 .message{
   @apply flex  flex-col text-xl font-bold w-full md:w-2/5 justify-center items-center md:items-start text-center md:text-left;
@@ -100,10 +132,17 @@ export default {
 .s-head{
   @apply flex justify-center items-center text-3xl md:text-5xl mx-10 px-10 font-semibold text-gray-900;
 }
+
+.main1{
+  @apply container text-black mx-auto flex px-4 md:px-0;
+}
 .flexin{
-  @apply flex justify-center items-center;
+  @apply flex justify-between items-center;
 }
 .gridincard{
   @apply grid  grid-cols-1 lg:grid-cols-4 gap-4  mt-14;
+}
+.griding{
+  @apply grid lg:grid-cols-4 gap-4;
 }
 </style>

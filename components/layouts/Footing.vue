@@ -31,13 +31,13 @@
                 <a href="#" target="_blank" class="link">SOCIAL</a>
               </li>
               <li class="lis">
-                <a href="https://www.github.com/myrachanto" target="_blank" class="link">Github</a>
+                <a href="https://twitter.com/PapersResearch" target="_blank" class="link">Twitter</a>
               </li>
               <li class="lis">
-                <a href="https://www.linkedin.com/in/myrachanto" target="_blank" class="link">Linkedin</a>
+                <a href="https://www.linkedin.com/company/top-research-papers" target="_blank" class="link">Linkedin</a>
               </li>
               <li class="lis">
-                <a href="https://www.facebook.com/myrachanto" target="_blank" class="link">Facebook</a>
+                <a href="https://www.facebook.com/Top-Research-Papers-101848294787396" target="_blank" class="link">Facebook</a>
               </li>
             </ul>
     </section>
@@ -54,9 +54,9 @@ export default {
       items: [
         {
           title: { head: 'LINKS', link: '#' },
-          link1: { head: 'FAQ', link: '/fqa' },
-          link2: { head: 'Help', link: '/help' },
-          link3: { head: 'Support', link: '/support' }
+          link1: { head: 'FAQ', link: '#' },
+          link2: { head: 'Help', link: '#' },
+          link3: { head: 'Support', link: '#' }
         },
         {
           title: { head: 'LEGAL', link: '#' },
@@ -67,8 +67,8 @@ export default {
         {
           title: { head: 'FIRM', link: '#' },
           link1: { head: 'Blog', link: '#' },
-          link2: { head: 'Porfolio', link: '/portfolio' },
-          link3: { head: 'Contact', link: '/contact' }
+          link2: { head: 'Porfolio', link: '#' },
+          link3: { head: 'Contact', link: '#' }
         }
       ]
     }
@@ -78,13 +78,13 @@ export default {
 
 <style scoped>
 .containers {
-@apply flex justify-center md:flex-wrap items-center mx-auto;
+@apply  container flex justify-center md:flex-wrap items-center mx-auto;
 }
 .gradient {
         background: linear-gradient(90deg, #3394ee 0%, #e5ecf0 100%);
 }
 .main3{
-  @apply container flex justify-between  items-center;
+  @apply flex container justify-between  items-center;
 }
 .chantos{
   @apply text-gray-300;

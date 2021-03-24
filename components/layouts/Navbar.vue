@@ -15,8 +15,13 @@
     <nav :class="isOpen ? 'block' : 'hidden'" class="menu2">
       <nuxt-link to="/" class="menulist2">Home</nuxt-link>
       <nuxt-link to="/" class="menulist2">Questions</nuxt-link>
-      <nuxt-link to="/" class="menulist2">About us</nuxt-link>
+      <nuxt-link to="/" class="menulist2">About</nuxt-link>
+      <div class="btn1 gradient">
+            order now
+          </div>
       <div >
+
+
 </div>
     </nav>
   </header>
@@ -54,19 +59,19 @@ export default {
   @apply text-gray-300;
 }
 .fixr{
-  @apply fixed w-11/12 sm:w-full z-30 top-0 mb-10 text-white;
+  @apply fixed w-full z-30 top-0 mb-10 text-white;
 }
 .header{
   @apply bg-transparent container sm:flex sm:justify-between sm:items-center sm:py-3 mx-auto justify-around items-center border-current ;
 }
 .nav{
-  @apply flex items-center justify-between py-1 sm:p-0;
+  @apply flex items-center justify-between py-3 sm:p-0;
 }
 .logo{
-  @apply text-2xl lg:text-3xl text-white flex justify-start items-start mr-1;
+  @apply text-2xl lg:text-3xl text-white flex justify-start items-start mr-4;
 }
 .logo1{
-  @apply h-10 w-10 mr-1;
+  @apply h-10 w-10 mr-4;
 }
 .svg{
   @apply h-8 w-8;
@@ -90,7 +95,7 @@ export default {
    }
 }
 .btn1{
-  @apply mx-auto lg:mx-0 hover:underline text-white font-bold rounded-full my-2 py-2 px-8 shadow-lg focus:outline-none focus:shadow-lg transform transition hover:scale-105 duration-300 ease-in-out;
+  @apply mx-auto lg:mx-0 hover:underline text-white  px-2 py-1 font-bold rounded-full my-2 shadow-lg focus:outline-none focus:shadow-lg transform transition hover:scale-105 duration-300 ease-in-out;
 }
 .hr{
   @apply border-b border-gray-100 opacity-25 my-0 py-0;

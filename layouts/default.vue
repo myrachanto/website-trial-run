@@ -1,5 +1,5 @@
 <template>
-  <div class="wrapper">
+  <div class="wrapper container">
     <navbar />
     <Nuxt />
     <footing />
@@ -8,7 +8,7 @@
 <script>
 
 import Navbar from '~/components/layouts/Navbar.vue'
-import Footing from '~/components/layouts/Footing.vue'
+import Footing from '../components/layouts/Footing'
 export default {
   components: { Navbar, Footing },
 }
