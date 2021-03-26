@@ -22,10 +22,10 @@
         </g>
       </g>
     </svg>
-    <div class="containers">
   <section class="main3">
-
-      <footercard  v-for="(item, i) in items" :key="i" :item="item"/>
+      <footercard  v-for="(item, i) in items" :key="i" :item="item"/>     
+<div class="wraps">
+   <div class="main">
        <ul class="uls">
               <li class="lis">
                 <a href="#" target="_blank" class="link">SOCIAL</a>
@@ -40,9 +40,10 @@
                 <a href="https://www.facebook.com/Top-Research-Papers-101848294787396" target="_blank" class="link">Facebook</a>
               </li>
             </ul>
+   </div>
+</div>
     </section>
     </div>
-</div>
 </template>
 
 <script>
@@ -77,20 +78,11 @@ export default {
 </script>
 
 <style scoped>
-.containers {
-@apply  container flex justify-center md:flex-wrap items-center mx-auto;
-}
 .gradient {
         background: linear-gradient(90deg, #3394ee 0%, #e5ecf0 100%);
 }
 .main3{
-  @apply flex container justify-between  items-center;
-}
-.chantos{
-  @apply text-gray-300;
-}
-.conta{
-  @apply container w-full my-2  text-5xl font-bold leading-tight text-center text-white;
+  @apply  container mx-auto grid grid-cols-2 lg:grid-cols-4;
 }
 .war{
   @apply w-full mb-4;
@@ -105,9 +97,15 @@ export default {
   @apply list-none mb-6;
 }
 .lis{
-  @apply mt-2 inline-block mr-2 md:block md:mr-0;
+  @apply mt-2  mr-2 block md:mr-0;
 }
 .link{
   @apply no-underline hover:underline text-black hover:text-gray-300;
+}
+.wraps{
+  @apply mx-5;
+}
+.main{
+  @apply container mx-auto;
 }
 </style>

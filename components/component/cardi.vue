@@ -17,13 +17,10 @@ export default {
 </script>
 <style scoped>
 .card1{
-  @apply bg-gray-200 rounded overflow-hidden w-60 md:w-80 shadow-lg;
-}
-.cardimg{
-  @apply  w-full h-32 sm:h-48 object-contain;
+  @apply bg-gray-100 rounded overflow-hidden md:w-80 ;
 }
 .h4header{
-  @apply font-serif text-xl md:text-2xl text-gray-700 flex flex-wrap items-center justify-center leading-tight;
+  @apply font-serif text-xl py-5 md:text-2xl text-gray-700 flex flex-wrap items-center justify-center leading-tight;
 }
 .cardbody{
   @apply m-4 text-xl text-gray-600 ;

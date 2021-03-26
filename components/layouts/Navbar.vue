@@ -14,10 +14,11 @@
     </div>
     <nav :class="isOpen ? 'block' : 'hidden'" class="menu2">
       <nuxt-link to="/" class="menulist2">Home</nuxt-link>
-      <nuxt-link to="/" class="menulist2">Questions</nuxt-link>
-      <nuxt-link to="/" class="menulist2">About</nuxt-link>
-      <div class="btn1 gradient">
+      <nuxt-link to="/questions" class="menulist2">Questions</nuxt-link>
+      <nuxt-link to="/aboutus" class="menulist2">About-us</nuxt-link>
+      <div class="btn1 gradient"> <a :href="`https://app.topresearchpapers.com/signup`">
             order now
+            </a>
           </div>
       <div >
 
@@ -89,18 +90,18 @@ export default {
   text-decoration: none;
 }
 .menulist2{
-  @apply mt-1 block no-underline px-2 py-1 text-2xl text-white font-semibold rounded hover:bg-white hover:text-black sm:mt-0 sm:ml-2;
-   &.nuxt-link-exact-active{
-     @apply text-white;
-   }
+  @apply mt-1 block no-underline px-2 py-1 text-2xl text-white font-semibold rounded hover:text-black sm:mt-0 sm:ml-2;
 }
 .btn1{
-  @apply mx-auto lg:mx-0 hover:underline text-white  px-2 py-1 font-bold rounded-full my-2 shadow-lg focus:outline-none focus:shadow-lg transform transition hover:scale-105 duration-300 ease-in-out;
+  @apply mx-auto lg:mx-0 no-underline text-white  px-2 py-1 font-bold rounded-full my-2 focus:outline-none shadow-md ;
 }
 .hr{
   @apply border-b border-gray-100 opacity-25 my-0 py-0;
 }
 .dropdown:hover .dropdown-menu {
   display: block;
+}
+a {
+  @apply no-underline text-white;
 }
 </style>

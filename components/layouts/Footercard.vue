@@ -27,10 +27,10 @@ export default {
 
 <style scoped>
 .wraps{
-  @apply flex justify-between items-center;
+  @apply mx-5;
 }
 .main{
-  @apply flex-1 container;
+  @apply container mx-auto;
 }
 .p{
   @apply uppercase text-gray-500 md:mb-6;
@@ -39,7 +39,7 @@ export default {
   @apply list-none mb-6;
 }
 .lis{
-  @apply mt-2 inline-block mr-2 md:block md:mr-0;
+  @apply mt-2 mr-2 block md:mr-0;
 }
 .link{
   @apply no-underline hover:underline text-white hover:text-gray-800;

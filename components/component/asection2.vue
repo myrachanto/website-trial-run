@@ -9,7 +9,7 @@
       </div>
       <div class="comment">
       <h2 class="h2c">What we do</h2>
-        We design and develop websites or application to accomodate both personal or business related. Our goal is to ensure that you as a client get to reap all the benefits associated with the product in this case website or web application that you hired us to develop.<br />
+           We design and develop both websites and application. Our goal is to ensure that you as a client get to reap all the benefits associated with the product in this case the website that you hired us to develop.<br />
         Online Accounting applications, e-commerce websites, simple websites, are just but a few of what we do here at Chantosweb developers<br />
 
       </div>
@@ -27,10 +27,10 @@ export default {
 
 <style scoped>
 .section{
-  @apply bg-gray-50;
+  @apply bg-gray-50 py-8;
 }
 .header1{
-  @apply flex justify-center items-center text-3xl md:text-5xl md:mx-10 md:px-10 font-semibold text-gray-900 ;
+  @apply flex justify-center py-4 items-center text-3xl md:text-5xl md:mx-16 md:px-16 font-semibold text-gray-900 ;
 }
 .flexing{
   @apply flex justify-center items-center;
@@ -42,12 +42,15 @@ export default {
   @apply text-gray-700 text-xl font-normal m-2 mx-5;
 }
 .imaging{
-  @apply rounded overflow-hidden shadow-lg;
+  @apply rounded overflow-hidden mx-5;
 }
 .cardimg1{
-  @apply w-full h-32 sm:h-full object-cover transform transition duration-500 hover:scale-125;
+  @apply w-full h-32 sm:h-full object-cover ;
 }
 .br{
   @apply my-2;
+}
+.h2c{
+  @apply my-4;
 }
 </style>
