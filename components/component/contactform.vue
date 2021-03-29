@@ -38,13 +38,13 @@
         <label class="lab" for="forms-labelOverInputCode">Pages / Slides:</label>
         <input class="form-name" v-model="order.pages" type="number" placeholder="Pages /slides" id="forms-labelOverInputCode"/>
     </div>
-    <div class="group texti">
-    <input  class="di" type="radio"  id="spacingOptions" name="spacingOptions" value="Single spacing" v-model="order.spacing">
-      <label for="single spacing">Single spacing</label>
-      <br>
+    <div class="radios texti">
+    <div><input  class="di" type="radio"  id="spacingOptions" name="spacingOptions" value="Single spacing" v-model="order.spacing">
+      <label for="single spacing">Single spacing</label></div>
+      <div>
       <input  class="di" type="radio"  id="spacingOptions" name="spacingOptions" value="double" v-model="order.spacing">
       <label for="double">Double</label>
-      <br>
+      </div>
     <!-- </label> -->
     </div>
     <div class="group texti">
@@ -84,6 +84,9 @@ data(){
 .group{
     @apply block my-1;
 }
+.radios{
+  @apply flex justify-evenly items-center;
+}
 .lab{
     @apply mb-1 mx-3 text-black;
 }
@@ -94,7 +97,7 @@ data(){
   @apply py-10 mx-5;
 }
 .btn3{
-  @apply text-gray-800 mx-auto lg:mx-0 hover:underline text-white font-bold rounded-full my-6 py-4 px-8;
+  @apply text-gray-800 mx-auto lg:mx-0 hover:underline text-white font-bold rounded-full py-4 px-8;
 }
 .di {
   @apply ml-3 mt-2;
