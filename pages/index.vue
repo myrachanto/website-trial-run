@@ -11,10 +11,13 @@
       <div class="main ">
         <!--Left Col-->
           <p class="message2 ">E-commerce website solutions</p>
-          <!-- <h1 class="message2">
-            Well..., Welcome home!
-          </h1> -->
+         
           <p class="comment">
+            We are the best e-commerce, website and application developers in the industry
+            <br />          
+            We are the best e-commerce, website and application developers in the industry
+          </p>
+           <p class="comment">
             We are the best e-commerce, website and application developers in the industry
             <br />          
             We are the best e-commerce, website and application developers in the industry
@@ -100,10 +103,10 @@ Online Accounting applications, e-commerce websites, simple websites, are just b
   @apply h-full w-full absolute;
 }
 .spany{
-  @apply h-4/6 lg:h-5/6 w-full absolute bg-black bg-opacity-10 bg-gradient-to-b from-gray-400 via-transparent to-black;
+  @apply h-4/6 lg:h-full w-full absolute bg-black bg-opacity-10 bg-gradient-to-b from-gray-400 via-transparent to-black;
 }
 .bgimg{
-  @apply h-4/6 lg:h-5/6 w-full object-cover bg-cover bg-no-repeat;
+  @apply h-4/6 lg:h-full w-full object-cover bg-cover bg-no-repeat;
 }
 .grido{
   @apply container mx-auto relative grid lg:grid-cols-3 gap-4;
@@ -118,7 +121,7 @@ Online Accounting applications, e-commerce websites, simple websites, are just b
   @apply col-span-2;
 }
 .main{
-  @apply mt-20 text-black mx-auto flex flex-wrap px-4 md:px-0 justify-between;
+  @apply mt-16 text-black mx-auto flex flex-wrap px-4 md:px-0 justify-between;
 }
 .message{
   @apply flex  flex-col text-xl font-bold w-full md:w-2/5 justify-center items-center md:items-start text-center md:text-left;
