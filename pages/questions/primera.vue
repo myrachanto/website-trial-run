@@ -3,11 +3,16 @@
     <div class="quizgrid">
     <div class="quizinner">
       <div class="quiztopic"> The question</div>
-      <div class="quizbody">We design and develop websites or application to accomodate both personal or business related. Our goal is to ensure that you as a client get to reap all the benefits associated with the product in this case website or web application that you hired us to develop. Online Accounting applications, e-commerce websites, simple websites, are just but a few of what we do here at Chantosweb developersWe design and develop websites or application to accomodate both personal or business related. Our goal is to ensure that you as a client get to reap all the benefits associated with the product in this case website or web application that you hired us to develop. Online Accounting applications, e-commerce websites, simple websites, are just but a few of what we do here at Chantosweb developersWe design and develop websites or application to accomodate both personal or business related. Our goal is to ensure that you as a client get to reap all the benefits associated with the product in this case website or web application that you hired us to develop. Online Accounting applications, e-commerce websites, simple websites, are just but a few of what we do here at Chantosweb developersWe design and develop websites or application to accomodate both personal or business related. Our goal is to ensure that you as a client get to reap all the benefits associated with the product in this case website or web application that you hired us to develop. Online Accounting applications, e-commerce websites, simple websites, are just but a few of what we do here at Chantosweb developersWe design and develop websites or application to accomodate both personal or business related. Our goal is to ensure that you as a client get to reap all the benefits associated with the product in this case website or web application that you hired us to develop. Online Accounting applications, e-commerce websites, simple websites, are just but a few of what we do here at Chantosweb developersWe design and develop websites or application to accomodate both personal or business related. Our goal is to ensure that you as a client get to reap all the benefits associated with the product in this case website or web application that you hired us to develop. Online Accounting applications, e-commerce websites, simple websites, are just but a few of what we do here at Chantosweb developersWe design and develop websites or application to accomodate both personal or business related. Our goal is to ensure that you as a client get to reap all the benefits associated with the product in this case website or web application that you hired us to develop. Online Accounting applications, e-commerce websites, simple websites, are just but a few of what we do here at Chantosweb developersWe design and develop websites or application to accomodate both personal or business related. Our goal is to ensure that you as a client get to reap all the benefits associated with the product in this case website or web application that you hired us to develop. Online Accounting applications, e-commerce websites, simple websites, are just but a few of what we do here at Chantosweb developers</div>
-      <div class="quizfoot">
-          <nuxt-link to="/about"><button class="quizbtn">
+      <div class="quizbody">We design and develop websites or application to accomodate both personal or business related. Our goal is to ensure that you as a client get to reap all the benefits associated with the product in this case website or web application that you hired us to develop. Online Accounting applications, e-commerce websites, simple websites, are just but a few of what we do here at Chantosweb developersWe design and develop websites or application to accomodate both personal or business related. Our goal is to ensure that you as a client get to reap all the benefits associated with the product in this case website or web application that you hired us to develop. Online Accounting applications, e-commerce websites, simple websites, are just but a few of what we do here at Chantosweb developersWe design and develop websites or application to accomodate both personal or business related. Our goal is to ensure that you as a client get to reap all the benefits associated with the product in this case website or web application that you hired us to develop. Online Accounting applications, e-commerce websites, simple websites, are just but a few of what we do here at Chantosweb developersWe design and develop websites or application to accomodate both personal or business related. Our goal is to ensure that you as a client get to reap all the benefits associated with the product in this case website or web application that you hired us to develop. Online Accounting applications, e-commerce websites, simple websites, are just but a few of what we do here at Chantosweb developersWe design and develop websites or application to accomodate both personal or business related. Our goal is to ensure that you as a client get to reap all the benefits associated with the product in this case website or web application that you hired us to develop. Online Accounting applications, e-commerce websites, simple websites, are just but a few of what we do here at Chantosweb developersWe design and develop websites or application to accomodate both personal or business related. Our goal is to ensure that you as a client get to reap all the benefits associated with the product in this case website or web application that you hired us to develop. Online Accounting applications, e-commerce websites, simple websites, are just but a few of what we do here at Chantosweb developersWe design and develop websites or application to accomodate both personal or business related. Our goal is to ensure that you as a client get to reap all the benefits associated with the product in this case website or web application that you hired us to develop. Online Accounting applications, e-commerce websites, simple websites, are just but a few of what we do here at Chantosweb developersWe design and develop websites or application to accomodate both personal or business related. Our goal is to ensure that you as a client get to reap all the benefits associated with the product in this case website or web application that you hired us to develop. Online Accounting applications, e-commerce websites, simple websites, are just but a few of what we do here at Chantosweb developers
+
+      </div>
+    <div class="quizorder1">Our experts have answered this question before</div>
+    <div class="quizorder2">Order your fresh answer as we don't resell customers nswers to avoid plagiarism</div>
+    <a :href="`https://app.topresearchpapers.com/signup`"><div class="quizorder3">Order your customized answer written from scracth now</div></a>
+    <div class="quizfoot">
+          <a :href="`https://app.topresearchpapers.com/signup`"><button class="quizbtn">
             order now
-          </button></nuxt-link>
+          </button></a>
       </div>
     </div>
     <div class="quizcal">
@@ -40,7 +45,7 @@ head () {
 
 <style>
 .quizsect{
-  @apply mt-16 container mx-auto;
+  @apply mt-16 container mx-auto ;
 }
 .quizgrid{
   @apply grid grid-cols-1 lg:grid-cols-3;
@@ -61,6 +66,15 @@ head () {
   @apply flex justify-center items-center;
 }
 .quizbtn{
-  @apply bg-white text-gray-800 mx-auto lg:mx-0 hover:underline text-white font-bold rounded-full my-6 py-4 px-8 focus:outline-none ;
+  @apply bg-blue-800 text-white text-lg mx-auto lg:mx-0 hover:underline text-white font-bold rounded-full my-6 py-4 px-8 focus:outline-none ;
+}
+.quizorder1{
+  @apply text-2xl flex justify-center items-center text-blue-800;
+}
+.quizorder2{
+  @apply text-2xl flex justify-center items-center text-blue-800;
+}
+.quizorder3{
+  @apply text-2xl flex justify-center items-center text-white bg-blue-800 rounded-full;
 }
 </style>

@@ -16,8 +16,12 @@
       <nuxt-link to="/" class="menulist2">Home</nuxt-link>
       <nuxt-link to="/questions" class="menulist2">Questions</nuxt-link>
       <nuxt-link to="/aboutus" class="menulist2">About-us</nuxt-link>
+      <div class="btnlogin"> <a :href="`https://app.topresearchpapers.com/login`">
+            Login
+            </a>
+          </div>
       <div class="btn1 gradient"> <a :href="`https://app.topresearchpapers.com/signup`">
-            order now
+            Order now
             </a>
           </div>
       <div >
@@ -92,6 +96,9 @@ export default {
 .menulist2{
   @apply mt-1 block no-underline px-2 py-1 text-lg lg:text-2xl text-black font-semibold rounded sm:mt-0 sm:ml-2;
 }
+.btnlogin{
+  @apply mx-auto lg:mx-0 no-underline px-2 py-1 font-bold rounded-full my-2 focus:outline-none shadow-md ;
+}
 .btn1{
   @apply mx-auto lg:mx-0 no-underline text-white  px-2 py-1 font-bold rounded-full my-2 focus:outline-none shadow-md ;
 }
@@ -103,5 +110,8 @@ export default {
 }
 a {
   @apply no-underline text-white;
+}
+.btnlogin a {
+  @apply no-underline text-green-800;
 }
 </style>

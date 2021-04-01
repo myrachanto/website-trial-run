@@ -48,6 +48,8 @@
 <asection />
      <!-- section -->
 <asection-2 />
+<!-- sec3 -->
+<section-3 />
   </div>
 </template>
 <script>
@@ -55,8 +57,9 @@ import Asection from '~/components/component/asection.vue'
 import Asection2 from '~/components/component/asection2.vue'
 import cardi from '~/components/component/cardi.vue'
 import Contactform from '~/components/component/contactform.vue'
+import Section3 from '~/components/component/section3.vue'
 export default {
-  components: { cardi, Asection, Asection2, Contactform },
+  components: { cardi, Asection, Asection2, Contactform, Section3 },
    head () {
     return {
       title: 'top questions',

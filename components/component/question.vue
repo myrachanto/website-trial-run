@@ -1,11 +1,11 @@
 <template>
      <div class="card1">
         <div class="cardbody">
+          <h1 class="title">The tiltle of the question</h1>
           <p class="cardbodyp">
-           {{item.description}}
-          <nuxt-link to="/questions/primera"><button class="btn4">
-            View question
-          </button></nuxt-link>
+            <nuxt-link to="/questions/primera">
+           {{elipso(item.description)}}
+          </nuxt-link>
           </p>
         </div>
         </div>
@@ -13,18 +13,29 @@
 
 <script>
 export default {
-  props: ['item']
+  props: ['item'],
+  methods:{
+        elipso(question) {
+      if (question.length > 250) {
+          return question.substring(0, 250) + '...';
+      }
+      return question;
+    }
+  }
 }
 </script>
 <style scoped>
 .card1{
   @apply bg-gray-100 rounded overflow-hidden  mb-2;
 }
-.h4header{
-  @apply font-serif text-xl md:text-2xl text-gray-700 flex flex-wrap items-center justify-center leading-tight;
+.title{
+  @apply text-2xl ;
 }
 .cardbody{
-  @apply m-4 text-xl my-4 mx-4 text-gray-600 md:flex justify-between items-center flex-wrap ;
+  @apply m-4 text-xl my-4 mx-4 text-gray-600 block;
+}
+.cardbody a {
+  @apply no-underline text-green-900;
 }
 .btn4{
   @apply bg-white text-gray-800 mx-auto lg:mx-0 hover:underline text-white font-bold rounded-full my-1 py-1 px-8 focus:outline-none ;
