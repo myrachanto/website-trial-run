@@ -1,12 +1,12 @@
 <template>
      <div class="card1">
         <div class="cardbody">
+            <nuxt-link to="/questions/primera">
           <h1 class="title">The tiltle of the question</h1>
           <p class="cardbodyp">
-            <nuxt-link to="/questions/primera">
            {{elipso(item.description)}}
-          </nuxt-link>
           </p>
+          </nuxt-link>
         </div>
         </div>
 </template>

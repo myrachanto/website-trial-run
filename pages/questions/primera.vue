@@ -7,7 +7,7 @@
 
       </div>
     <div class="quizorder1">Our experts have answered this question before</div>
-    <div class="quizorder2">Order your fresh answer as we don't resell customers nswers to avoid plagiarism</div>
+    <div class="quizorder2">Order your fresh answer as we don't resell customers answers to avoid plagiarism</div>
     <a :href="`https://app.topresearchpapers.com/signup`"><div class="quizorder3">Order your customized answer written from scracth now</div></a>
     <div class="quizfoot">
           <a :href="`https://app.topresearchpapers.com/signup`"><button class="quizbtn">

@@ -20,7 +20,7 @@
             Login
             </a>
           </div>
-      <div class="btn1 gradient"> <a :href="`https://app.topresearchpapers.com/signup`">
+      <div class="btn1"> <a :href="`https://app.topresearchpapers.com/signup`">
             Order now
             </a>
           </div>
@@ -97,10 +97,10 @@ export default {
   @apply mt-1 block no-underline px-2 py-1 text-lg lg:text-2xl text-black font-semibold rounded sm:mt-0 sm:ml-2;
 }
 .btnlogin{
-  @apply mx-auto lg:mx-0 no-underline px-2 py-1 font-bold rounded-full my-2 focus:outline-none shadow-md ;
+  @apply mx-auto lg:mx-0 no-underline px-2 py-1 font-bold rounded-full my-2 focus:outline-none shadow-md bg-green-700 ;
 }
 .btn1{
-  @apply mx-auto lg:mx-0 no-underline text-white  px-2 py-1 font-bold rounded-full my-2 focus:outline-none shadow-md ;
+  @apply mx-auto lg:mr-4 no-underline text-white  px-2 py-1 font-bold rounded-full my-2 focus:outline-none shadow-md bg-blue-700 ;
 }
 .hr{
   @apply border-b border-gray-100 opacity-25 my-0 py-0;
@@ -111,7 +111,7 @@ export default {
 a {
   @apply no-underline text-white;
 }
-.btnlogin a {
+/* .btnlogin a {
   @apply no-underline text-green-800;
-}
+} */
 </style>
