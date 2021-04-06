@@ -10,7 +10,7 @@
       <div class="span2">
       <div class="main ">
         <!--Left Col-->
-          <p class="message2 ">A research paper helper </p>
+          <p class="message2 ">An Essay Helper  </p>
          
           <p class="comment">
             Get online and regular class help through our assignments, discussions, responses, quizzes, and exams professionals.

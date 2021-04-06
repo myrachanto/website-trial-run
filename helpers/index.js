@@ -6,7 +6,7 @@ export const appUrl2 = 'https://app.topresearchpapers.com'
 export const serverUrl = appUrl
 
 export const http = axios.create({
-  baseURL: appUrl2,
+  baseURL: appUrl,
   timeout:50000,
   headers: {'X-Custom-Headers': 'foobar'}
 })

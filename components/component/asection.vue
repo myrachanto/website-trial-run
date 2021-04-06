@@ -1,13 +1,14 @@
 <template>
   <div>
     <div class="section">
-      <h2 class="header1">Services</h2>
+      <h2 class="header1">Assignments Help Services</h2>
       <div class="flexing">
       <div class="griding">
       <div class="comment">
-      <h2 class="h2c">Get an essay helper or a research paper helper now</h2>
-       The assignment puzzle is a mystery to most students throughout their academic lives as there are assignments from left, right, and center. The assignments range from simple essays to complex dissertations, which have to be delivered and marked to determine their fate. It is not easy to handle all these assignments, attain the best grades in classes, and handle other activities outside classes like work and the likes. It is important to note that most students double education and work, which therefore strains them and makes their lives a nightmare. Worry no more as we are ready o help you take an online class or complete that assignment within any set deadline.<br />
-You can pay for your first assignment once it is completed, as It takes the first order to trust a service. You can never regret it.
+      <h2 class="h2c">Write my assignment</h2>
+       We offer assignment help services in all subjects. We have helped thousands of students go through high school, college, undergraduate, and master's and Ph.D. levels at ease. We have worked with some students from high school to the Ph.D. level as we have writers qualified to handle assignments in all these categories.  <br />
+        We are aware of the concerns that most students have regarding trusting online academic writing websites. We know there is a sense of fear when preparing and completing your assignments. It is hard to complete assignments and enjoy precious time with your loved ones as the deadline always keeps your mind running. To overcome all these, you can seek help from our experts who understand what I take to deliver an excellent assignment. 
+
       </div>
       <div class="imaging">
         <img src="~/assets/imgs/2.webp" alt="responsive dashboard" class="cardimg1"/>
