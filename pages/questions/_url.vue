@@ -1,10 +1,10 @@
 <template>
   <div class="quizsect">
     <div class="quizgrid">
-    <div class="quizinner">
-      <div class="quiztopic"> {{item.topic}}</div>
+    <div class="quizinner" v-if="question">
+      <div class="quiztopic"> {{question.topic}}</div>
       <div class="quizbody">
-        {{item.question}}
+        {{question.question}}
       </div>
     <div class="quizorder1">Our experts have answered this question before</div>
     <div class="quizorder2">Order your fresh answer as we don't resell customers nswers to avoid plagiarism</div>
@@ -33,7 +33,7 @@ export default {
    async asyncData ({ params }) {
      console.log(params.url,'test url')
     let quiz = null
-    const { data } = await http.get('/api/maswali/'+params.url)
+    const { data } = await http.get('/api/maswali/detail/'+params.url)
     console.log("data test",data)
     const { state, maswali } = data
 

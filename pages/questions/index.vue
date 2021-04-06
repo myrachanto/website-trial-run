@@ -37,13 +37,13 @@ export default {
 
    async asyncData() {
      let quizes = []
-     console.log("ffffffffffffffffffff")
-    const { data } = await http.get(`/api/question`)
-    const { state, question } = data
-    // console.log(questions)
+    //  console.log("ffffffffffffffffffff")
+    const { data } = await http.get(`/api/maswali`)
+    const { state, maswalis } = data
+    // console.log(maswali)
     // const { docs, page, pages, total, limit } = questions
     if (state) {
-        quizes = question
+        quizes = maswalis
     }
 
     return { questions: quizes}

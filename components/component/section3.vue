@@ -1,7 +1,7 @@
 <template>
   <div class="sec3">
       <div class="sec3inner">
-      <h2 class="header1">Get an essay helper or a research paper helpr now</h2>
+      <h2 class="header1">Get an essay helper or a research paper helper now</h2>
       <div class="secpart1">The assignment puzzle is a mystery to most students throughout their academic lives as there are assignments from left, right, and center. The assignments range from simple essays to complex dissertations, which have to be delivered and marked to determine their fate. It is not easy to handle all these assignments, attain the best grades in classes, and handle other activities outside classes like work and the likes. It is important to note that most students double education and work, which therefore strains them and makes their lives a nightmare. Worry no more as we are ready o help you take an online class or complete that assignment within any set deadline.<br />
 You can pay for your first assignment once it is completed, as It takes the first order to trust a service. You can never regret it.
 
@@ -48,7 +48,7 @@ export default {
     @apply container mx-auto;
 }
 .header1{
-  @apply flex justify-start py-4 mx-5 items-center text-2xl md:text-3xl md:mx-16 md:px-16 font-semibold text-gray-900 ;
+  @apply flex justify-center py-4 mx-5 items-center text-2xl md:text-3xl md:mx-16 md:px-16 font-semibold text-gray-900 ;
 }
 .hea2{
   @apply py-4 mx-5 text-2xl md:text-3xl md:mx-16 md:px-16 font-semibold text-gray-900 ;
