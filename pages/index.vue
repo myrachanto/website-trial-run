@@ -148,7 +148,7 @@ export default {
 }
 
 .main1{
-  @apply container text-black mx-auto py-1;
+  @apply container text-black mx-auto py-1 mt-5;
 }
 .griding{
   @apply grid md:grid-cols-2 lg:grid-cols-3 mx-5 gap-1 my-1;
