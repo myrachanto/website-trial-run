@@ -5,13 +5,12 @@
       <div class="flexing">
       <div class="griding">
       <div class="comment">
-      <h2 class="h2c">What we do</h2>
-        We design and develop both websites and application. Our goal is to ensure that you as a client get to reap all the benefits associated with the product in this case the website that you hired us to develop.<br />
-        Online Accounting applications, e-commerce websites, simple websites, are just but a few of what we do here at Chantosweb developers<br />
-
+      <h2 class="h2c">Get an essay helper or a research paper helper now</h2>
+       The assignment puzzle is a mystery to most students throughout their academic lives as there are assignments from left, right, and center. The assignments range from simple essays to complex dissertations, which have to be delivered and marked to determine their fate. It is not easy to handle all these assignments, attain the best grades in classes, and handle other activities outside classes like work and the likes. It is important to note that most students double education and work, which therefore strains them and makes their lives a nightmare. Worry no more as we are ready o help you take an online class or complete that assignment within any set deadline.<br />
+You can pay for your first assignment once it is completed, as It takes the first order to trust a service. You can never regret it.
       </div>
       <div class="imaging">
-        <img src="~/assets/imgs/2.webp" alt="rresponsive dashboard" class="cardimg1"/>
+        <img src="~/assets/imgs/2.webp" alt="responsive dashboard" class="cardimg1"/>
       </div>
     </div>
     </div>

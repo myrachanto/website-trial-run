@@ -1,7 +1,7 @@
 <template>
      <div class="card1">
         <div class="cardbody">
-            <nuxt-link to="/questions/primera">
+            <nuxt-link :to="`/questions/${item.url}`">
           <h1 class="title">The tiltle of the question</h1>
           <p class="cardbodyp">
            {{elipso(item.description)}}

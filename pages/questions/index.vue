@@ -3,13 +3,14 @@
     <div class="section">
       <h2 class="header1">Questions</h2>
       <div class="quiz">
-      <question v-for="(item, i) in items" :key="i" :item="item"/>
+      <question v-for="(item, i) in questions" :key="i" :item="item"/>
       </div>
     </div>
   </div>
 </template>
 
 <script>
+import { http } from '@/helpers/index.js'
 import question from '~/components/component/question.vue'
 export default {
   components: { question },
@@ -28,54 +29,67 @@ export default {
   data(){
     return {
       items: [
-        {
-          id: 1,
-          title: 'primera ',
-          description: `We design and develop websites or application to accomodate both personal or business related. Our goal is to ensure that you as a client get to reap all the benefits associated with the product in this case website or web application that you hired us to develop.
-          Online Accounting applications, e-commerce websites, simple websites, are just but a few of what we do here at Chantosweb developers`
-        },
-         {
-          id: 2,
-          title: 'segundo ',
-          description: `We design and develop websites or application to accomodate both personal or business related.`
-        },
-         {
-          id: 3,
-          title: 'tress ',
-          description: `We design and develop websites or application to accomodate both personal or business related. Our goal is to ensure that you as a client get to reap all the benefits associated with the product in this case website or web application that you hired us to develop.`
-        },
-         {
-          id: 4,
-          title: 'tress ',
-          description: `We design and develop websites or application to accomodate both personal or business related. Our goal is to ensure that you as a client get to reap all the benefits associated with the product in thiss`
-        },
-        {
-          id: 5,
-          title: 'primera ',
-          description: `We design and develop websites or application to accomodate both personal or business related. Our goal is to ensure that you as a client get to reap all the benefits associated with the product in this case website or web application that you hired us to develop.
-          Online Accounting applications, e-commerce websites, simple websites, are just but a few of what we do here at Chantosweb developers`
-        },
-         {
-          id: 6,
-          title: 'segundo ',
-          description: `We design and develop websites or application to accomodate both personal or business related. Our goal is to ensure that you as a client get to reap all the benefits associated with the product in this case website or web application that you hired us to develop.
-          Online Accounting applications, e-commerce websites, simple websites, are just but a few of what we do here at Chantosweb developers`
-        },
-         {
-          id: 7,
-          title: 'tress ',
-          description: `We design and develop websites or application to accomodate both personal or business related. Our goal is to ensure that you as a client get to reap all the benefits associated with the product in this case website or web application that you hired us to develop.
-          Online Accounting applications, e-commerce websites, simple websites, are just but a few of what we do here at Chantosweb developers`
-        },
-         {
-          id: 8,
-          title: 'tress ',
-          description: `We design and develop websites or application to accomodate both personal or business related. Our goal is to ensure that you as a client get to reap all the benefits associated with the product in this case website or web application that you hired us to develop.
-          Online Accounting applications, e-commerce websites, simple websites, are just but a few of what we do here at Chantosweb developers`
-        }
       ]
     }
-  }
+  },
+  
+  watchQuery: true,
+
+   async asyncData() {
+     let quizes = []
+    const { data } = await http.get(`/api/maswali`)
+    const { state, maswali } = data
+    // console.log(questions)
+    // const { docs, page, pages, total, limit } = questions
+    if (state) {
+        quizes = maswali
+    }
+
+    return { questions: quizes}
+  },
+  //  async asyncData({query}) {
+  //   let quizes = []
+  //   let currentPage = query.currentPage || 1
+  //   // console.log(query)
+  //   let perPage = 50
+  //   let rows = 0
+  //   let tot = 0
+  //   const { data } = await http.get(`/api/question?page=${currentPage}&limit=${perPage}`)
+  //   const { state, questions } = data
+  //   // console.log(questions)
+  //   const { docs, page, pages, total, limit } = questions
+  //   if (state) {
+  //       quizes = docs
+  //       currentPage = page
+  //       rows = pages
+  //       tot = total
+  //       perPage = limit
+  //   }
+
+  //   return { questions: quizes, currentPage, rows,tot, perPage}
+  // },
+  methods: {
+    // next(rows,currentPage){
+    //   console.log("next button hit")
+      
+    //   // console.log(rows)
+    //   if (currentPage < rows){
+    //       currentPage ++
+    //       // console.log(currentPage)
+    //       this.$router.push({ name: 'questions', query: { currentPage } })
+    //     }else{
+    //       return
+    //     }
+    // },
+    // prev(currentPage){
+    //     if (currentPage > 1){
+    //       currentPage --
+    //      this.$router.push({ name: 'questions', query: { currentPage } })
+    //     }else{
+    //       return
+    //     }
+    // },
+  },
 }
 </script>
 

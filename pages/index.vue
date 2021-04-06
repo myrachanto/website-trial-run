@@ -10,17 +10,13 @@
       <div class="span2">
       <div class="main ">
         <!--Left Col-->
-          <p class="message2 ">E-commerce website solutions</p>
+          <p class="message2 ">A research paper helper </p>
          
           <p class="comment">
-            We are the best e-commerce, website and application developers in the industry
-            <br />          
-            We are the best e-commerce, website and application developers in the industry
+            Get online and regular class help through our assignments, discussions, responses, quizzes, and exams professionals.
           </p>
            <p class="comment">
-            We are the best e-commerce, website and application developers in the industry
-            <br />          
-            We are the best e-commerce, website and application developers in the industry
+            We offer assignment help to thousands of students globally. We have been in the industry since 2009, and we have handled thousands of essays, as can be seen in the questions section. 
           </p>
           <nuxt-link to="/aboutus"><button class="btn5">
             For more info
@@ -62,11 +58,11 @@ export default {
   components: { cardi, Asection, Asection2, Contactform, Section3 },
    head () {
     return {
-      title: 'top questions',
+      title: 'An Essay Helper | A research paper helper| Take my Online class ',
       meta: [
-        { hid: 'description', name: 'description', content: 'top questions' },
-        { hid: 'og:title', name: 'og:title', content: 'top questions' },
-        { hid: 'og:description', name: 'og:description', content: 'top questions' },
+        { hid: 'description', name: 'description', content: 'An essay helper online ready! Are you looking for “someone to take my online class?” You are at the right place. Get  0% plagiarized essays with as short as 3 HOURS from our experts.' },
+        { hid: 'og:title', name: 'og:title', content: 'An Essay Helper | A research paper helper| Take my Online class ' },
+        { hid: 'og:description', name: 'og:description', content: 'An essay helper online ready! Are you looking for “someone to take my online class?” You are at the right place. Get  0% plagiarized essays with as short as 3 HOURS from our experts.' },
         { hid: 'og:type', name: 'og:type', content: 'website' },
         { hid: 'og:url', name: 'og:url', content: `https://essaymentor.us` },
       ]
@@ -77,21 +73,18 @@ export default {
       items: [
         {
           id: 1,
-          title: 'primera ',
-          description: `We design and develop both websites and application. Our goal is to ensure that you as a client get to reap all the benefits associated with the product in this case the website that you hired us to develop.
-Online Accounting applications, e-commerce websites, simple websites, are just but a few of what we do here at Chantosweb developers`
+          title: 'An essay helper',
+          description: `Our essay helpers can help you complete 0% plagiarized essays with as short as 3 hours deadline. We have professionals from different fields who have over five years' experience. All our tutors have masters and Ph.D. qualifications, and hence we deliver high-quality papers always to our customers. We also have free unlimited revisions requests in all the papers we provide in line with your instructor's revision comments. `
         },
          {
           id: 2,
-          title: 'segundo ',
-          description: `We design and develop both websites and application. Our goal is to ensure that you as a client get to reap all the benefits associated with the product in this case the website that you hired us to develop.
-Online Accounting applications, e-commerce websites, simple websites, are just but a few of what we do here at Chantosweb developers`
+          title: 'A research paper helper',
+          description: `Are you looking for a research paper helper? Feel free to ask for our help as our professional research paper helpers are ready to assist you 24/7. We have a support team on stand-by, and we guarantee timely response and delivery of your research paper. Our professionals have long-term experience, and hence we guarantee top-notch quality orders. Your academic excellence is our pride, so order a research paper now.`
         },
          {
           id: 3,
-          title: 'tress ',
-          description: `We design and develop both websites and application. Our goal is to ensure that you as a client get to reap all the benefits associated with the product in this case the website that you hired us to develop.
-Online Accounting applications, e-commerce websites, simple websites, are just but a few of what we do here at Chantosweb developers`
+          title: 'Take my Online class ',
+          description: `We can help you take your online class by handling the assignments, discussion posts, responses, quizzes, and exams. We have completed online courses for students before, and we can guarantee you that we can help you complete that class and help you gain high grades. Our professionals have Masters and Ph.D. qualifications from different courses, and for this reason, we deliver professional assignments all the time.`
         }
       ]
     }
@@ -106,10 +99,10 @@ Online Accounting applications, e-commerce websites, simple websites, are just b
   @apply h-full w-full absolute;
 }
 .spany{
-  @apply h-4/6 lg:h-full w-full absolute bg-black bg-opacity-10 bg-gradient-to-b from-gray-400 via-transparent to-black;
+  @apply h-full w-full absolute bg-black bg-opacity-10 bg-gradient-to-b from-gray-900 via-transparent to-black;
 }
 .bgimg{
-  @apply h-4/6 lg:h-full w-full object-cover bg-cover bg-no-repeat;
+  @apply h-full w-full object-cover bg-cover bg-no-repeat;
 }
 .grido{
   @apply container mx-auto relative grid lg:grid-cols-3 gap-4;
@@ -130,10 +123,10 @@ Online Accounting applications, e-commerce websites, simple websites, are just b
   @apply flex  flex-col text-xl font-bold w-full md:w-2/5 justify-center items-center md:items-start text-center md:text-left;
 }
 .message2{
-  @apply my-4 text-2xl md:text-4xl text-black font-bold leading-tight;
+  @apply my-4 text-2xl md:text-4xl text-white font-bold leading-tight;
 }
 .comment{
-  @apply leading-normal text-white md:text-white text-xl md:text-2xl mb-8 mr-4;
+  @apply leading-normal text-white font-semibold md:text-white text-xl md:text-2xl mb-8 mr-4;
 }
 .btn5{
   @apply bg-white text-gray-800 mx-auto lg:mx-0 hover:underline text-white font-bold rounded-full my-6 py-4 px-8 focus:outline-none ;
