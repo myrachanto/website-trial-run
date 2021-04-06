@@ -108,7 +108,7 @@ export default {
   @apply container mx-auto relative grid lg:grid-cols-3 gap-4;
 }
 .hero{
-  @apply mx-5;
+  @apply mx-5 mb-2;
 }
 .shaper{
  fill: white;
@@ -148,7 +148,7 @@ export default {
 }
 
 .main1{
-  @apply container text-black mx-auto py-1 mt-5;
+  @apply container text-black mx-auto py-1 mt-2;
 }
 .griding{
   @apply grid md:grid-cols-2 lg:grid-cols-3 mx-5 gap-1 my-1;
