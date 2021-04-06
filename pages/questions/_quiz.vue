@@ -24,17 +24,34 @@
 </template>
 
 <script>
+import { http, } from '@/helpers/index.js'
 import contactform from '~/components/component/contactform.vue'
 import Freeitems from '~/components/component/freeitems.vue'
 export default {
   components: { contactform, Freeitems },
-head () {
+
+   async asyncData ({ params }) {
+     console.log(params.url,'test url')
+    let quiz = null
+    const { data } = await http.get('/api/maswali/'+params.url)
+    console.log("data test",data)
+    const { state, maswali } = data
+
+    if (state) {
+        quiz = maswali
+    }
+
+    return { question: quiz }
+
+  },
+   head () {
+    const question = this.question || {}
     return {
-      title: 'quiz',
+      title: question.topic,
       meta: [
-        { hid: 'description', name: 'description', content: 'quiz' },
-        { hid: 'og:title', name: 'og:title', content: 'quiz' },
-        { hid: 'og:description', name: 'og:description', content: 'quiz' },
+        { hid: 'description', name: 'description', content: question.question },
+        { hid: 'og:title', name: 'og:title', content: question.topic },
+        { hid: 'og:description', name: 'og:description', content: question.meta },
         { hid: 'og:type', name: 'og:type', content: 'website' },
         { hid: 'og:url', name: 'og:url', content: `https://essaymentor.us` },
       ]
