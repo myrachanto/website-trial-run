@@ -7,7 +7,7 @@
         {{question.question}}
       </div>
     <div class="quizorder1">Our experts have answered this question before</div>
-    <div class="quizorder2">Order your fresh answer as we don't resell customers nswers to avoid plagiarism</div>
+    <div class="quizorder2">Order your fresh answer as we don't resell customers answers to avoid plagiarism</div>
     <div class="quizorder3">Order your customized answer written from scracth now</div>
     <div class="quizfoot">
           <nuxt-link to="/about"><button class="quizbtn">
@@ -47,10 +47,10 @@ export default {
    head () {
     const question = this.question || {}
     return {
-      title: question.topic,
+      title: question.title,
       meta: [
-        { hid: 'description', name: 'description', content: question.question },
-        { hid: 'og:title', name: 'og:title', content: question.topic },
+        { hid: 'description', name: 'description', content: question.meta },
+        { hid: 'og:title', name: 'og:title', content: question.title },
         { hid: 'og:description', name: 'og:description', content: question.meta },
         { hid: 'og:type', name: 'og:type', content: 'website' },
         { hid: 'og:url', name: 'og:url', content: `https://essaymentor.us` },
