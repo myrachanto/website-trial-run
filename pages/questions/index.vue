@@ -16,11 +16,11 @@ export default {
   components: { question },
   head () {
     return {
-      title: 'questions list',
+      title: 'Questions Answered | Research Paper Answers | Assignments Answers',
       meta: [
-        { hid: 'description', name: 'description', content: 'questions list' },
-        { hid: 'og:title', name: 'og:title', content: 'questions list' },
-        { hid: 'og:description', name: 'og:description', content: 'questions list' },
+        { hid: 'description', name: 'description', content: ' We have answered thousands of questions for students. We can also help you complete any assignment, Research papers, quizzes, exams and any other academic papers.' },
+        { hid: 'og:title', name: 'og:title', content: 'Questions Answered | Research Paper Answers | Assignments Answers' },
+        { hid: 'og:description', name: 'og:description', content: ' We have answered thousands of questions for students. We can also help you complete any assignment, Research papers, quizzes, exams and any other academic papers.' },
         { hid: 'og:type', name: 'og:type', content: 'website' },
         { hid: 'og:url', name: 'og:url', content: `https://essaymentor.us` },
       ]
