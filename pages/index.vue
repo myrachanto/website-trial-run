@@ -105,7 +105,7 @@ export default {
   @apply h-full w-full object-cover bg-cover bg-no-repeat;
 }
 .grido{
-  @apply container mx-auto relative grid lg:grid-cols-3 gap-4;
+  @apply container mx-auto relative grid lg:grid-cols-3 gap-1;
 }
 .hero{
   @apply mx-5 mb-2;
@@ -114,7 +114,7 @@ export default {
  fill: white;
 }
 .span2{
-  @apply col-span-2;
+  @apply lg:col-span-2;
 }
 .main{
   @apply mt-16 text-black mx-auto flex flex-wrap px-4 md:px-0 justify-between;
@@ -137,9 +137,9 @@ export default {
 .drimg{
   @apply w-full  py-6 text-center bg-transparent;
 }
-.cv{
+/* .cv{
   @apply relative -mt-10 lg:-mt-24 border-transparent;
-}
+} */
 .section{
   @apply bg-white -mt-2 border border-b-2 py-4;
 }

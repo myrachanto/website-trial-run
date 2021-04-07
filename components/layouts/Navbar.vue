@@ -79,7 +79,7 @@ export default {
   @apply h-10 w-10 mr-4;
 }
 .svg{
-  @apply h-8 w-8;
+  @apply h-8 w-8 text-blue-700;
 }
 .menu1{
   @apply sm:hidden ;
