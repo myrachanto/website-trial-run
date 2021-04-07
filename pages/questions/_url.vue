@@ -92,6 +92,6 @@ export default {
   @apply text-2xl flex justify-center items-center text-blue-800;
 }
 .quizorder3{
-  @apply text-2xl flex justify-center items-center text-white bg-blue-800 rounded-full;
+  @apply text-2xl mx-auto px-4 text-white bg-blue-800 rounded-full;
 }
 </style>

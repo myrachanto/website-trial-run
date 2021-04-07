@@ -1,5 +1,8 @@
 export default {
   // Global page headers: https://go.nuxtjs.dev/config-head
+  // server: {
+  //   port: 4621 // default: 3000
+  // },
   head: {
     title: 'questions',
     htmlAttrs: {
@@ -37,6 +40,10 @@ export default {
     // https://go.nuxtjs.dev/axios
     '@nuxtjs/axios',
   ],
+  
+ target: 'static',
+ 
+ publicPath: 'https://www.anessayhelper.com',
   tailwindcss: {
     jit: true
   },
