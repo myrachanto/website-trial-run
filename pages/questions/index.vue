@@ -5,6 +5,14 @@
       <div class="quiz">
       <question v-for="(item, i) in questions" :key="i" :item="item"/>
       </div>
+      <div class="quizd"><button  @click="prev(currentPage)"  class="btn7">
+            Previous
+          </button>
+          <span class="page">{{currentPage}}/{{rows}}</span>
+          <button @click="next(rows,currentPage)" class="btn7">
+           Next
+          </button>
+      </div>
     </div>
   </div>
 </template>
@@ -34,62 +42,61 @@ export default {
   },
   
   watchQuery: true,
-
-   async asyncData() {
-     let quizes = []
-    //  console.log("ffffffffffffffffffff")
-    const { data } = await http.get(`/api/maswali`)
-    const { state, maswalis } = data
-    // console.log(maswali)
-    // const { docs, page, pages, total, limit } = questions
+  async asyncData({query}) {
+    let quizes = []
+    let currentPage = query.currentPage || 1
+    // console.log(query)
+    let perPage = 10
+    let rows = 0
+    let tot = 0
+    const { data } = await http.get(`/api/maswali?page=${currentPage}&&limit=${perPage}`)
+    const { state, maswali } = data
+    // console.log(questions)
+    const { docs, page, pages, total, limit } = maswali
     if (state) {
-        quizes = maswalis
+        quizes = docs
+        currentPage = page
+        rows = pages
+        tot = total
+        perPage = limit
     }
 
-    return { questions: quizes}
+    return { questions: quizes, currentPage, rows,tot, perPage}
   },
-  //  async asyncData({query}) {
-  //   let quizes = []
-  //   let currentPage = query.currentPage || 1
-  //   // console.log(query)
-  //   let perPage = 50
-  //   let rows = 0
-  //   let tot = 0
-  //   const { data } = await http.get(`/api/question?page=${currentPage}&limit=${perPage}`)
-  //   const { state, questions } = data
-  //   // console.log(questions)
-  //   const { docs, page, pages, total, limit } = questions
+  //  async asyncData() {
+  //    let quizes = []
+  //    console.log("ffffffffffffffffffff")
+  //   const { data } = await http.get(`/api/maswali?page=1&&limit=10`)
+  //   const { state, maswali } = data
+  //   console.log(maswali)
+  //   // const { docs, page, pages, total, limit } = questions
   //   if (state) {
-  //       quizes = docs
-  //       currentPage = page
-  //       rows = pages
-  //       tot = total
-  //       perPage = limit
+  //       quizes = maswali
   //   }
 
-  //   return { questions: quizes, currentPage, rows,tot, perPage}
+  //   return { questions: quizes}
   // },
   methods: {
-    // next(rows,currentPage){
-    //   console.log("next button hit")
+    next(rows,currentPage){
+      console.log("next button hit")
       
-    //   // console.log(rows)
-    //   if (currentPage < rows){
-    //       currentPage ++
-    //       // console.log(currentPage)
-    //       this.$router.push({ name: 'questions', query: { currentPage } })
-    //     }else{
-    //       return
-    //     }
-    // },
-    // prev(currentPage){
-    //     if (currentPage > 1){
-    //       currentPage --
-    //      this.$router.push({ name: 'questions', query: { currentPage } })
-    //     }else{
-    //       return
-    //     }
-    // },
+      // console.log(rows)
+      if (currentPage < rows){
+          currentPage ++
+          // console.log(currentPage)
+          this.$router.push({ name: 'questions', query: { currentPage } })
+        }else{
+          return
+        }
+    },
+    prev(currentPage){
+        if (currentPage > 1){
+          currentPage --
+         this.$router.push({ name: 'questions', query: { currentPage } })
+        }else{
+          return
+        }
+    },
   },
 }
 </script>
@@ -102,7 +109,15 @@ export default {
   @apply flex justify-center items-center text-3xl md:text-5xl md:mx-10 md:px-10 font-semibold text-gray-900 py-4;
 }
 .quiz{
-  @apply container mx-auto
+  @apply container mx-auto;
 }
-
+.quizd{
+ @apply flex justify-center items-center;
+}
+.btn7{
+  @apply bg-white text-gray-800 mx-auto lg:mx-0 hover:underline text-white font-bold rounded-full my-6 py-4 px-8 focus:outline-none ;
+}
+.page{
+  @apply mx-5;
+}
 </style>

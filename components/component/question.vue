@@ -2,9 +2,8 @@
      <div class="card1">
         <div class="cardbody">
             <nuxt-link :to="`/questions/${item.url}`">
-          <h1 class="title">The tiltle of the question</h1>
-          <p class="cardbodyp">
-           {{elipso(item.question)}}
+          <h1 class="title">{{item.topic}}</h1>
+          <p class="cardbodyp" v-html="elipso(item.question)">
           </p>
           </nuxt-link>
         </div>

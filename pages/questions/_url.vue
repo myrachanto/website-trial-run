@@ -3,12 +3,11 @@
     <div class="quizgrid">
     <div class="quizinner" v-if="question">
       <div class="quiztopic"> {{question.topic}}</div>
-      <div class="quizbody">
-        {{question.question}}
+      <div class="quizbody" v-html="question.question">
       </div>
     <div class="quizorder1">Our experts have answered this question before</div>
     <div class="quizorder2">Order your fresh answer as we don't resell customers answers to avoid plagiarism</div>
-    <div class="quizorder3">Order your customized answer written from scracth now</div>
+    <div class="quizorder3"><div>Order your customized answer written from scracth now</div></div>
     <div class="quizfoot">
           <nuxt-link to="/about"><button class="quizbtn">
             order now
@@ -33,7 +32,7 @@ export default {
    async asyncData ({ params }) {
      console.log(params.url,'test url')
     let quiz = null
-    const { data } = await http.get('/api/maswali/detail/'+params.url)
+    const { data } = await http.get('/api/maswali/'+params.url)
     console.log("data test",data)
     const { state, maswali } = data
 
@@ -92,6 +91,6 @@ export default {
   @apply text-2xl flex justify-center items-center text-blue-800;
 }
 .quizorder3{
-  @apply text-2xl mx-auto px-4 text-white bg-blue-800 rounded-full;
+  @apply text-2xl flex justify-center items-center text-white bg-blue-800 rounded-full;
 }
 </style>
