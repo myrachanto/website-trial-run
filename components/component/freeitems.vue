@@ -3,7 +3,7 @@
   <div class="freeheader">Free Features</div>
      <div class="card1" v-for="(item, i) in features" :key="i">
         <div class="cardbody">
-          <div>{{item.name}}</div><div class="pricing"><div>For <span class="cost">${{item.cost}}</span> <span class="free">FREE</span></div>
+          <div>{{item.name}}</div><div class="pricing"><div class="for"> <span class="cost">${{item.cost}}</span> <span class="free">FREE</span></div>
         </div></div>
 </div>
 </div>
@@ -31,18 +31,21 @@ export default {
   @apply bg-gray-100 rounded overflow-hidden ;
 }
 .freeheader{
-  @apply font-serif bg-black text-xl text-white py-5 md:text-2xl text-gray-700 flex flex-wrap items-center justify-center leading-tight;
+  @apply font-serif bg-black text-xl text-white py-5 md:text-2xl flex flex-wrap items-center justify-center leading-tight;
 }
 .cardbody{
-  @apply m-1 text-lg text-gray-600 flex justify-between items-center;
+  @apply m-1  mx-5 text-lg text-gray-600 flex justify-between items-center;
 }
 .cost{
-  @apply line-through;
+  @apply line-through mx-2;
 }
 .free{
   @apply text-red-700;
 }
 .pricing{
-  @apply flex justify-between items-center
+  @apply flex justify-start items-center;
+}
+.for{
+  @apply text-left;
 }
 </style>

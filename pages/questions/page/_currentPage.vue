@@ -45,7 +45,7 @@ export default {
   async asyncData({query}) {
     let quizes = []
     let currentPage = query.currentPage || 1
-    // console.log(query)
+    console.log("ddddddddddddddddddddddddddddddddddddddddd",currentPage)
     let perPage = 50
     let rows = 0
     let tot = 0
@@ -91,7 +91,7 @@ export default {
       if (currentPage < rows){
           currentPage ++
           // console.log(currentPage)
-          this.$router.push({ path: 'questions/page/', query: { currentPage } })
+          this.$router.push({ query: { currentPage } })
         }else{
           return
         }
@@ -99,7 +99,7 @@ export default {
     prev(currentPage){
         if (currentPage > 1){
           currentPage --
-         this.$router.push({ path: 'questions/page/', query: { currentPage } })
+         this.$router.push({ query: { currentPage } })
         }else{
           return
         }

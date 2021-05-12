@@ -97,7 +97,7 @@ data(){
   @apply py-10 mx-5;
 }
 .btn3{
-  @apply text-gray-800 mx-auto lg:mx-0 hover:underline text-white font-bold rounded-full py-4 px-8;
+  @apply  mx-auto lg:mx-0 hover:underline text-white font-bold rounded-full py-4 px-8;
 }
 .di {
   @apply ml-3 mt-2;
