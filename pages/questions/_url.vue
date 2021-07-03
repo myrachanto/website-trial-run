@@ -18,7 +18,7 @@
   </div></div>
   <div class="brugrid">
     <div>
-      <blurry  :showModal="showModal" :closeModal="closeModal"/>
+      <blurry  :showModal="showModal" :closeModal="closeModal"  :cost="question.cost"/>
     </div>
     <div>
       <div class="rates">This answer was provided by one of our premium writers</div>

@@ -42,6 +42,7 @@ export default {
   },
   
   watchQuery: true,
+  
   async asyncData({query}) {
     let quizes = []
     let currentPage = query.currentPage || 1
@@ -70,19 +71,6 @@ export default {
 
     return { questions: quizes, currentPage, rows,tot, perPage}
   },
-  //  async asyncData() {
-  //    let quizes = []
-  //    console.log("ffffffffffffffffffff")
-  //   const { data } = await http.get(`/api/maswali?page=1&&limit=10`)
-  //   const { state, maswali } = data
-  //   console.log(maswali)
-  //   // const { docs, page, pages, total, limit } = questions
-  //   if (state) {
-  //       quizes = maswali
-  //   }
-
-  //   return { questions: quizes}
-  // },
   methods: {
     next(rows,currentPage){
       console.log("next button hit")

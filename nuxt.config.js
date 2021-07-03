@@ -19,6 +19,11 @@ export default {
   // Global CSS: https://go.nuxtjs.dev/config-css
   css: [
   ],
+  sitemap:{
+    path: '/sitemap.xml',
+    hostname: 'htttp://localhost:4621',
+    lastmod: '2021-05-20',
+  },
 
   // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
   plugins: [
