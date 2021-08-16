@@ -37,6 +37,7 @@
           <div @click="showModal" class="flat_btn"><button class="quizbtn">
             Buy Answer
           </button></div>
+          <button class="quizbtn1" @click="showInta" data-amount="10" data-currency="KES">Pay With Intasend</button>
       </div>
     </div>
     <div class="quizcal">
@@ -44,21 +45,31 @@
       <freeitems />
     </div>
     </div>
+    <inta
+      v-show="intaModal"
+      :question="question"
+      :handleInta="handleInta"
+      @close="closeInta"
+    />
   </div>
 </template>
 
 <script>
+// import IntaSend from 'intasend-inlinejs-sdk';
+import axios from 'axios'
 import { http,appUrl } from '@/helpers/index.js'
 import contactform from '~/components/component/contactform.vue'
 import Freeitems from '~/components/component/freeitems.vue'
 import Ratings from '~/components/component/ratings.vue'
 import Modal from '~/components/layouts/modal.vue'
 import Blurry from '~/components/component/blurry.vue'
+import Inta from '~/components/layouts/inta.vue'
 export default {
-  components: { contactform, Freeitems, Ratings, Modal, Blurry },
+  components: { contactform, Freeitems, Ratings, Modal, Blurry, Inta },
   data(){
     return{
       purchaseModal: false,
+      intaModal: false,
       activeQuestion: null,
       name: '',
       phone: '',
@@ -98,6 +109,12 @@ export default {
     }
   },
    methods: {
+     showInta() {
+        this.intaModal = true;
+      },
+      closeInta() {
+        this.intaModal = false;
+      },
      showModal() {
         this.purchaseModal = true;
       },
@@ -111,6 +128,83 @@ export default {
           return false
           }
           return true
+      },
+      // handleInta(name,phone,email, question) {
+      //     let customBtnObj = new window.IntaSend({
+      //         host: 'http://localhost:4621',
+      //         publicAPIKey: "REPLACE-WITH-YOUR-PUBLISHABLE-KEY",
+      //         live: false // set to true when going live
+      //     })
+      //     IntaSend.run({
+      //         amount: question.cost,
+      //         currency: "USD",
+      //         email: email,
+      //         first_name: name,
+      //         // host: 'http://localhost:4621',
+      //         phone: phone,
+      //         country: "US"
+      //     })
+      //     .on("COMPLETE", () => alert("Do something on success"))
+      //     .on("FAILED", () => alert("Do something on failure"))
+      //     .on("IN-PROGRESS", () => console.log("Payment in progress status"))
+      // },
+      async handleInta(name,phone,email, question){
+        //validate email //
+        var ok = this.ValidateEmail(email)
+        if(!ok){
+          return
+        }
+                  // intaSendInstance.run({
+        //   amount: question.cost,
+        //           currency: "USD",
+        //           email: email,
+        //           first_name: name,
+        //           // host: 'http://localhost:4621',
+        //           phone: phone,
+        //           country: "US"
+        //           })
+        //           .on("COMPLETE", (results) => {
+        //             const url = `${this.appUrl}/api/paymentquiz/success/${name}/${phone}/${email}/${question._id}/${question.cost}?PayerID=${results.data.signature}&&paymentId=${results.data.id}`;
+        //             window.location.href = url;                    
+        //           })
+        //           .on("FAILED", () => {
+        //              this.$router.push('/failed')                    
+        //           })
+          let url = "https://sandbox.intasend.com/api/v1/checkout/"
+              let payload = {
+                  public_key: "ISPubKey_test_1d05f642-f7b6-40c1-8cf7-76f712f68df0",
+                  amount: question.cost,
+                  currency: "USD",
+                  email: email,
+                  first_name: name,
+                  host: 'http://localhost:4621/succ',
+                  phone_number: phone,
+                  country: "US"
+              }
+              //validate email //
+              var ok = this.ValidateEmail(email)
+              if(!ok){
+                return
+              }
+             await axios.post(url, payload).then((resp) => {
+                  if (resp.data.url) {
+                      window.open(resp.data.url, '_blank').focus();
+                      // handling(resp.data)
+                      console.log("res insta response", resp.data)
+                  }
+              }).catch((err) => {
+                console.log(err)
+                // this.$router.push('/failed')
+              })
+
+      },
+      handling(resp){
+           console.log('inta response', resp.data)
+            if (resp.signature === ''){
+              throw error();
+            }
+            const url = `${this.appUrl}/api/paymentquiz/success/${name}/${phone}/${email}/${question._id}/${this.question.cost}?PayerID=${resp.data.signature}&&paymentId=${resp.data.id}`;
+            window.location.href = url;
       },
     handleSubmit(name,phone,email, question) {
       console.log("spit email",email, question)
@@ -157,6 +251,9 @@ export default {
 }
 .quizbtn{
   @apply bg-blue-800 text-white text-lg mx-auto lg:mx-0 hover:underline font-bold rounded-full my-6 py-4 px-8 focus:outline-none ;
+}
+.quizbtn1{
+  @apply bg-blue-400 text-black text-lg mx-auto lg:mx-0 hover:underline font-bold rounded-full my-6 py-4 px-8 focus:outline-none ;
 }
 .quizorder1{
   @apply text-2xl flex justify-center items-center text-blue-800;

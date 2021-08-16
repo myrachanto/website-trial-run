@@ -21,7 +21,7 @@ export default {
   ],
   sitemap:{
     path: '/sitemap.xml',
-    hostname: 'htttp://localhost:4621',
+    hostname: 'http://localhost:4621',
     lastmod: '2021-05-20',
   },
 
@@ -29,6 +29,7 @@ export default {
   plugins: [
     // '~/plugins/date',
     { src: '~/plugins/tawk', ssr: false },
+    // { src: '~/plugins/intersend', ssr: false },
     // '~/plugins/capitalize',
     // '~/plugins/filters',
     // { src: '~/plugins/localstorage', ssr: false }

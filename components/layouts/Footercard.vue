@@ -42,6 +42,6 @@ export default {
   @apply mt-2 mr-2 block md:mr-0;
 }
 .link{
-  @apply no-underline hover:underline text-white hover:text-gray-800;
+  @apply no-underline hover:underline text-black hover:text-gray-800;
 }
 </style>
